@@ -16,13 +16,9 @@ import LineSDK
     return LoginManager.shared.setup(channelID: channelID, universalLinkURL: universalLinkURL)
   }
   
-  @objc public static func application(
-    _ application: UIApplication,
-    open url: URL,
-    options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool
-  {
-    return LoginManager.shared.application(application, open: url, options: options)
-  }
+  @objc public static func application(_ app: UIApplication, open url: URL, options: options: [AnyHashable : Any] = [:]) -> Bool {
+    return LoginManager.shared.application(app, open: url)
+}
   
   @objc public static func application(
     _ application: UIApplication,
